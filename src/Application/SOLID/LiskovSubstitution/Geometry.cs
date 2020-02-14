@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Application.SOLID.LiskovSubstitution
+﻿namespace Application.SOLID.LiskovSubstitution
 {
     /*
      * The Liskov Substitution states that a class should always be castable to it's father.
@@ -39,6 +35,10 @@ namespace Application.SOLID.LiskovSubstitution
             public new int Height { set => Width = Height = value; }
         }
 
+        /// <summary>
+        /// This class follows the Likov substitution principle
+        /// If the reference for it is kept through it's base class, it will mantain the expect behavior as the properties are overriden
+        /// </summary>
         public class LiskovSquare : Rectangle
         {
             public override int Width
